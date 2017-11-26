@@ -31,4 +31,6 @@ npm run e2e
 npm test
 ```
 
+![Dashboard](https://user-images.githubusercontent.com/917006/33239883-18208124-d2ac-11e7-9598-8e597fd89b32.png)
+
 
