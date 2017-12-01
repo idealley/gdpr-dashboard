@@ -9,6 +9,7 @@ export const toggleDrawer = ({ commit }) => {
 
 export const getData = ({ commit, dispatch }) => {
   const route = `dashboard/${store.state.user.id}`
+  HTTP.defaults.headers.common['Authorization'] = store.state.token
   HTTP
   .get(route)
   .then(response => {

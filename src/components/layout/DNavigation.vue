@@ -42,7 +42,7 @@
       </v-toolbar>
       <v-divider></v-divider>
       <v-list dense class="pt-0">
-        <v-list-tile :href="item.route" v-for="item in items" :key="item.title" @click="">
+        <v-list-tile :to="item.route" v-for="item in items" :key="item.title" @click="">
           <v-list-tile-action>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-tile-action>
