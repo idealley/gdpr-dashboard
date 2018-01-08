@@ -13,6 +13,7 @@ export const getData = ({ commit, dispatch }) => {
   HTTP
   .get(route)
   .then(response => {
+    console.log(response)
     commit(types.SET_DATA, response, err => { console.log(err) })
   })
   .catch(e => {

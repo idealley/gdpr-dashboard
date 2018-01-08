@@ -39,32 +39,32 @@
                       <v-icon>keyboard_arrow_down</v-icon>
                     </v-list-tile-action>
                   </v-list-tile>
-                  <v-list-tile v-for="systems in item.systems" v-bind:key="systems.title" @click="">
+                  <v-list-tile v-for="system in item.systems" v-bind:key="system.title" @click="">
                     <v-list-tile-content>
                       <v-list-tile-title>
                         <span 
-                          :class="systems.rel === 'revoke' ? systems.rel : '' "
+                          :class="system.rel === 'revoke' ? system.rel : '' "
                         >
-                          {{ systems.system }}
+                          {{ system.system }}
                         </span>
                         <span 
                           style="text-decoration:none;" 
-                          v-if="systems.rel === 'revoke'"
+                          v-if="system.rel === 'revoke'"
                         >
                           - authorization revoked
                         </span>
                       </v-list-tile-title>
-                      <v-list-tile-sub-title>{{ systems.auth }}</v-list-tile-sub-title>
+                      <v-list-tile-sub-title>{{ system.auth }}</v-list-tile-sub-title>
                     </v-list-tile-content>
                     <v-list-tile-action>
                       <v-btn 
                         small 
                         icon 
                         ripple
-                        @click="toggle(item.value, systems)"
+                        @click="toggle(item.value, system)"
                       >
-                        <v-icon v-if="systems.rel === 'revoke'" color="green darken-2">check</v-icon>
-                        <v-icon v-if="systems.rel !== 'revoke'" color="red darken-2">cancel</v-icon>
+                        <v-icon v-if="system.rel === 'revoke'" color="green darken-2">check</v-icon>
+                        <v-icon v-if="system.rel !== 'revoke'" color="red darken-2">cancel</v-icon>
                       </v-btn>
                     </v-list-tile-action>  
                   </v-list-tile>
@@ -135,6 +135,7 @@
       },
 
       toggle (property, system) {
+        console.log('property:', property)
         const data = {
           property: property,
           type: system.rel === 'revoke' ? 'needs' : 'revoke',

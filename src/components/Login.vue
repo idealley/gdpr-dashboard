@@ -107,8 +107,7 @@
 
     methods: {
       ...mapActions([
-        'login',
-        'getData'
+        'login'
       ]),
 
       submit () {
