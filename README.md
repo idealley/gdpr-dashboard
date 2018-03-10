@@ -1,4 +1,6 @@
 # User Dashboard 
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/idealley/gdpr-dashboard.svg)](https://greenkeeper.io/)
 This simple dashboard is a Proof of Concept for GDPR. It displays where the data is used, what is the authorization that was granted and the possiblity to revoke that authorization.
 
 The backend database is [GRAKN.AI](https://grakn.ai/)
